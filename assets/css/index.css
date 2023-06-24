@@ -1,0 +1,522 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    font-family: var(--font);
+    font-weight: var(--weight-r);
+    min-width: 320px;
+    min-height: 100vh;
+	line-height: var(--body-line-height);
+
+}
+
+body p {
+    color: var(--dark-electric-blue);
+}
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: var(--weight-sb);
+    line-height: var(--heading-line-height);
+
+}
+
+h1 {
+    font-size: var(--heading-xl);
+}
+
+h2 {
+    font-size: var(--heading-l);
+}
+
+h3 {
+    font-size: var(--heading-m);
+}
+
+h4 {
+    font-size: var(--heading-s);
+}
+
+.wrapper {
+    max-width: 1100px;
+    margin-inline: auto;
+}
+.hero-wrapper {
+    position: relative;
+    text-align: center;
+    position: relative;
+    margin-bottom: 9rem;
+}
+
+.hero-image {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 2.125rem;
+}
+
+.hero-description {
+    padding-block: 6.625rem;
+    padding-inline: 1rem;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(214, 230, 254, 1) 100%);
+    border-bottom-right-radius: 2rem;
+  }
+  
+
+.hero-description > h1 {
+    margin-bottom: 1.5rem;
+}
+
+.bmi-calculator {
+    padding: 1.5rem;
+    margin-top: -4rem;
+    margin-inline: 1rem;
+    background: var(--pure-white);
+    border-radius: 1.2rem;
+    filter: drop-shadow(0.1rem 0.1rem 0.4rem rgba(94, 110, 133, 0.25));
+}
+
+.bmi-calculator > .input-fields {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+
+.input-fields > .input-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+
+.input-fields > .input-group label {
+    font-size: var(--body-s);
+    color: var(--dark-electric-blue);
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+}
+
+.input-fields > .input-group > .input-field {
+    position: relative;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.input-fields > .input-group > .input-field input {
+    font-size: var(--heading-m);
+    font-weight: var(--weight-sb);
+    padding-block: 1rem;
+    padding-inline: 1.5rem;
+    color: var(--gunmetal);
+
+    border: var(--borders) 1px solid;
+    border-radius: 0.7rem;
+    width: calc(100% - 3.5rem);
+}
+
+.input-fields > .input-group > .input-field input:focus {
+    outline: none;
+}
+
+.input-fields > .input-group > .input-field span {
+    font-size: var(--heading-m);
+    font-weight: var(--weight-sb);
+    color: var(--blue);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1.5rem;
+
+}
+
+
+.bmi-calculator > button {
+    all: unset;
+    width: calc(100% - 4rem);
+    background: linear-gradient(90deg, rgba(52,95,246,1) 22%, rgba(88,125,255,1) 78%);
+    margin-top: 1.5rem;
+    padding: 2rem;
+    
+    color: var(--pure-white);
+    font-size: var(--body-m);
+    border-radius: 0.5rem;
+}
+
+.bmi-calculator > button p {
+    color: var(--pure-white);
+    margin-top: 1.5rem;
+    font-size: var(--body-s);
+    font-weight: unset;
+}
+
+.bmi-calculator > button .greetings {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+
+.calculated-bmi {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    gap: 2rem;
+
+}
+
+.calculated-bmi > .bmi-result {
+    display: flex;
+    flex-direction: column;
+}
+
+.bmi-result span {
+    margin-top: 1rem;
+    font-size: var(--heading-xl);
+    font-weight: var(--weight-sb);
+}
+
+.calculated-bmi > .range-weight  > .minmax-result span{
+    font-weight: var(--weight-sb);
+}
+
+.your-result {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    margin-bottom: 2rem;
+}
+
+.your-result-image-wrapper {
+    border-radius: 1rem;
+    background: #E7F5FE;
+    position: relative;
+    padding-block:8rem;
+}
+
+.your-result-image-wrapper img {
+    bottom: 0;
+    position: absolute;
+    left: 50%;
+transform: translateX(-50%);
+}
+
+.your-result-description {
+    padding-block: 2rem; 
+    padding-inline: 1rem;
+}
+
+.your-result-description h3 {
+    margin-bottom: 1.5rem;
+}
+
+.tips-wrapper {
+    padding-block: 2rem;
+    background: rgb(214,230,254);
+    background: linear-gradient(254deg, rgba(214,230,254,0.7693452380952381) 0%, rgba(214,252,254,0.18391106442577032) 62%)}
+
+.tip {
+    padding: 1.5rem
+}
+
+.image-wrapper > .iconify{
+    color: black;
+    font-size: var(--heading-l);
+    padding: 0.7rem;
+    border-radius: 50%;
+}
+
+.tip:first-child {
+    padding-block-start: unset;
+}
+.tip:last-child {
+    padding-block-end: unset;
+}
+
+.tip:first-child .iconify{
+    color: #F21E84;
+    background: rgba(242, 30, 132, 0.1);
+}
+.tip:nth-child(2) .iconify{
+    color: #F69134;
+    background:  rgba(246, 145, 52, 0.1);
+
+}
+
+.tip:last-child .iconify{
+    color: #22C1C1;
+    background:  rgba(34, 193, 193, 0.1);
+}
+
+
+.limitations-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-block: 4rem;
+    padding-inline: 1.5rem;
+}
+
+.limitations-description {
+    text-align: center;
+    margin-bottom: 2rem;
+
+}
+
+.limitations-description h2 {
+    margin-bottom: 2rem;
+}
+
+.limitation-lists {
+    display: grid;
+    gap: 1rem;
+}
+
+.limitation {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background: var(--pure-white);
+    filter: drop-shadow(0.2rem 0.1rem 0.7rem rgba(94, 110, 133, 0.25));
+}
+
+.limitation-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-transform: capitalize;
+}
+
+.limitation-title svg {
+    font-size: var(--heading-l);
+}
+
+.limitation-title {
+    margin-bottom: 1rem;
+}
+
+.limitation:first-child svg {
+    color: #F24E1E;
+}
+
+.limitation:nth-child(2) svg {
+    color: #22C1C1;
+}
+.limitation:nth-child(3) svg {
+    color: #9747FF;
+}
+.limitation:nth-child(4) svg {
+    color: #FFC700;
+}
+.limitation:last-child svg {
+    color: #F21E84;
+}
+
+
+
+
+/* Medium devices such as tablets (768px and up) */
+@media only screen and (min-width: 48em) {
+    .bmi-calculator > .input-fields      {
+        flex-direction: row;
+    }
+
+    .bmi-calculator  button {
+        border-top-right-radius: 5rem;
+        border-bottom-right-radius: 5rem;
+    }
+
+    .calculated-bmi {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .calculated-bmi > * {
+        flex: 1;
+    }
+
+    .your-result {
+        flex-direction: row;
+        gap: 4.6875rem;
+        margin-bottom: 5rem;
+    }
+
+    .your-result > div {
+        flex: 1;
+    }
+
+   .your-result-image-wrapper {
+        align-self: end;
+        height: 0;
+        margin-left: -5rem;
+    }
+
+    .limitation-lists {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1rem; /* Adjust the gap value as per your requirements */
+    }
+
+    .limitation-lists > .limitation:first-child{
+       grid-column: 1/3;
+    }
+    .limitation-lists > .limitation:nth-child(2){
+        grid-column: 3/5;
+     }
+     .limitation-lists > .limitation:nth-child(3){
+        grid-column: 1/3;
+     }
+     .limitation-lists > .limitation:nth-child(4){
+        grid-column: 3/5;
+     }
+     .limitation-lists > .limitation:last-child{
+        grid-column: 2/4;
+     }
+
+     .limitations-description {
+        margin-bottom: 3.5rem;
+     }
+
+    
+}
+
+/* Large devices such as laptops (1024px and up) */
+@media only screen and (min-width: 64em) {
+    .hero-wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .hero-image {
+        margin-top: 4.8125rem;
+        left: 2.5rem;
+    }
+
+    .hero-description {
+        text-align: start;
+        padding-right: 23.9375rem;
+        padding-top: 13.125rem;
+        padding-bottom: 12.25rem;
+        max-width: 465px;
+    }
+
+    .bmi-calculator {
+        margin-top: unset;
+        align-self: center;
+        margin-left: -19.5rem;
+        margin-right: 1.5rem;
+    }
+    
+
+    .your-result-image-wrapper {
+        align-self: center;
+    }
+
+    .limitations-wrapper {
+        position: relative;
+    }
+    
+    .limitations-description {
+        width: 29.25rem;
+        position: absolute;
+        left: 1.5rem;
+        margin-bottom: unset;
+        text-align: start;
+     }
+
+    .tips-wrapper {
+        display: flex;
+        align-items: stretch;
+    }
+    
+    .tips-wrapper > .image-wrapper {
+        margin-right: 1rem; /* Adjust the margin as needed */
+    }
+    
+    .tips-wrapper > .tip-description {
+        flex: 1;
+    }
+    
+    .tips-wrapper > .tip-description .tip-title {
+        margin-top: 0; /* Remove default margin */
+        margin-bottom: 0.5rem; /* Adjust the margin as needed */
+    }
+
+    .tip:first-child {
+        padding-block-start: 1.5rem;
+    }
+    .tip:last-child {
+        padding-block-end: 1.5rem;
+    }
+    .limitations-wrapper {
+        flex-direction: row;
+    }
+
+    .limitation-lists {
+        grid-template-columns: repeat(10, 1fr);
+    }
+
+    .limitation-lists > .limitation:first-child{
+        grid-column: 6/9
+     }
+     .limitation-lists > .limitation:nth-child(2){
+         grid-column: 3/7;
+      }
+      .limitation-lists > .limitation:nth-child(3){
+         grid-column: 7/11;
+      }
+      .limitation-lists > .limitation:nth-child(4){
+         grid-column: 1/5;
+      }
+      .limitation-lists > .limitation:last-child{
+         grid-column: 5/9;
+      }
+ 
+
+    
+}
+
+/* Largest devices such as desktops (1280px and up) */
+@media only screen and (min-width: 80em) {...}

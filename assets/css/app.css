@@ -1,0 +1,41 @@
+:root {
+    /* Colors */
+    --blue: #345FF6;
+    --gunmetal: #253347;
+    --dark-electric-blue: #5E6E85;
+    --borders : #D8E2E7;
+    --pure-white: #FFFFFF;
+
+    /* Typography */
+    --font: 'Inter', sans-serif;
+    --weight-sb: 600;
+    --weight-r: 400;
+    
+    /* --heading-xl: 4rem;
+    --heading-l: 3rem;
+    --heading-m: 1.5rem;
+    --heading-s: 1.25rem; */
+
+    --heading-xl: 3rem;
+    --heading-l: 2rem;
+    --heading-m: 1.5rem;
+    --heading-s: 1.25rem;
+
+    --body-m: 1rem;
+    --body-m-bold: 1rem;
+    --body-s: 0.875rem;
+
+    --heading-line-height: 110%;
+    --body-line-height: 150%;
+}
+
+img,
+video {
+  display: inline-block; /* Adjust display property if needed */
+  max-width: 100%; /* Prevent images and videos from exceeding their container */
+  height: auto; /* Maintain aspect ratio */
+  border: 0; /* Remove any default border */
+  margin: 0; /* Remove any default margins */
+  padding: 0; /* Remove any default padding */
+  vertical-align: middle; /* Align elements vertically within the line */
+}

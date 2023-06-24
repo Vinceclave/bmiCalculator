@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/app.css">
+
+</head>
+<body>
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-wrapper wrapper">
+                <div class="hero-image">
+                    <img src="./assets/images/logo.png" alt="">
+                </div>
+                <div class="hero-description">
+                    <h1>Body Mass Index Calculator</h1>
+                    <p>Better understand your weight in relation to your height using our body mass index (BM) calculator. While BMI is not the sole determinant of a healthy weight, it offers a valuable starting point to evaluate your overall health and well-being.</p>
+                </div>
+                <form class="bmi-calculator">
+                    <h3>Enter your details below</h3>
+                    <p>Metric</p>
+                    <div class="input-fields">
+                        <div class="input-group">
+                            <label for="">height</label>
+                            <div class="input-field">
+                                <input type="text" id="height-input-field">
+                                <span>cm</span>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="">weight</label>
+                            <div class="input-field">
+                                <input type="text" id="weight-input-field">
+                                <span>kg</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button disabled>
+                        <div class="greetings">
+                            <h3>Welcome!</h3>
+                            <p>Enter your height and weight and you'll see your BMI result here</p>    
+                        </div>
+                    </button>
+                </form>
+            </div>
+        </section>
+        <section class="your-result wrapper">
+            <div class="your-result-image-wrapper">
+                <img src="./assets/images/your-image.png" alt="">
+            </div>
+            <div class="your-result-description">
+                <h3>What your BMI result means</h3>
+                <p>
+                    A BMI range of 18.5 to 24.9 is considered a 'healthy weight.' Maintaining a healthy weight may lower your chances of experiencing health issues later on, such as obesity and type 2 diabetes. Aim for a nutritious diet with reduced fat and sugar content, incorporating ample fruits and vegetables. Additionally, strive for regular physical activity, ideally about 30 minutes daily for five days a week.
+                </p>
+            </div>
+        </section>
+        <section class="tips-wrapper wrapper"></section>
+        <section class="limitations-wrapper wrapper">
+            <div class="limitations-description">
+                <h2>Limitations of BMI</h2>
+                <p>Although BMI is often a practical indicator of healthy weight, it is not suited for every person. Specific groups should carefully consider their BMI outcomes, and in certain cases, the measurement may not be beneficial to use.</p>
+            </div>
+            <div class="limitation-lists">
+                
+            </div>
+        </section>
+    </main>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <script src="./js/index.js" type="module"></script>
+    <script src="./js/components/tipsComponent.js" type="module"></script>
+    <script src="./js/components/limitationComponent.js" type="module"></script>
+    <script src="./js/data.js" type="module"></script>
+</body>
+</html>
